@@ -1,0 +1,27 @@
+{
+  "base_dirs": {
+    "desktop": "~/Desktop",
+    "screenshots": "~/Pictures/Screenshots",
+    "downloads": "~/Downloads",
+    "docs": "~/Documents",
+    "images": "~/Pictures",
+    "videos": "~/Movies",
+    "pdf": "~/Documents/PDF",
+    "code": "~/Projects",
+    "invoices": "~/Documents/Invoices",
+    "jobs": "~/Documents/Jobs"
+  },
+  "rules": [
+    { "if_ext_in": ["pdf"], "to": "pdf" },
+    { "if_ext_in": ["png", "jpg", "jpeg", "gif", "heic"], "to": "images" },
+    { "if_ext_in": ["mp4", "mov", "avi"], "to": "videos" },
+    { "if_ext_in": ["py", "cpp", "c", "h", "js", "ts", "java", "kt", "go", "rs"], "to": "code" },
+
+
+    { "if_name_has_any": ["resume", "cv"], "to": "jobs" },
+    { "if_name_has_any": ["invoice", "receipt", "bill"], "to": "invoices" },
+
+    { "if_name_matches_any_regex": ["^Screen Shot .*", "^Screenshot .*", "^\\u622a\\u56fe .*"], "to": "screenshots" }
+  ],
+  "fallback_dir": "docs"
+}
