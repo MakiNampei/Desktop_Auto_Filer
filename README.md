@@ -1,17 +1,17 @@
 # Desktop_Auto_Filer
 
 
-Main command line:
-## This could print where the document will be move to (but not actually moved)
+## Main command line:
+### This could print where the document will be move to (but not actually moved)
 ```  python desk_move.py --once --dry-run ``` 
 
-## This is the real clean, which will move the document to the desginated place
+### This is the real clean, which will move the document to the desginated place
 ```  python desk_move.py --once ``` 
 
-## keep watching Desktop，it will move the new documents once it figured out and move it following the rules
+### keep watching Desktop，it will move the new documents once it figured out and move it following the rules
 ```  python desk_move.py --watch ``` 
 
-## This could undo the most recent move (only undo 1 doc)
+### This could undo the most recent move (only undo 1 doc)
 ```  python desk_move.py --undo ``` 
 
 ### Here is the example for terminal testing:
@@ -58,7 +58,7 @@ Main command line:
 [i] nothing to undo
 ``` 
 
-## In order to make the watchdog work, an package is need to install
+### In order to make the watchdog work, an package is need to install
 ``` pip install watchdog ``` 
 
 ``` python watch_watchdog.py ``` 
