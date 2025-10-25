@@ -14,7 +14,7 @@ python desk_move.py --watch
 # This could undo the most recent move (only undo 1 doc)
 python desk_move.py --undo
 
-Here is the example for terminal testing:
+## Here is the example for terminal testing:
 
 (base) makinampei@MakiN-MacBook-Pro Desktop_Auto_Filer % python desk_move.py --once --dry-run
 [dry-run] Screenshot 2025-09-23 at 21.05.15.png -> /Users/makinampei/Pictures
@@ -54,3 +54,7 @@ Here is the example for terminal testing:
 ... (After 12 undos)
 (base) makinampei@MakiN-MacBook-Pro Desktop_Auto_Filer % python desk_move.py --undo
 [i] nothing to undo
+
+# In order to make the watchdog work, an package is need to install
+```pip install watchdog 
+```python watch_watchdog.py
