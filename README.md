@@ -3,19 +3,20 @@
 
 Main command line:
 # This could print where the document will be move to (but not actually moved)
-python desk_move.py --once --dry-run
+```  python desk_move.py --once --dry-run ``` 
 
 # This is the real clean, which will move the document to the desginated place
-python desk_move.py --once
+```  python desk_move.py --once ``` 
 
 # keep watching Desktop，it will move the new documents once it figured out and move it following the rules
-python desk_move.py --watch
+```  python desk_move.py --watch ``` 
 
 # This could undo the most recent move (only undo 1 doc)
-python desk_move.py --undo
+```  python desk_move.py --undo ``` 
 
 ## Here is the example for terminal testing:
 
+``` 
 (base) makinampei@MakiN-MacBook-Pro Desktop_Auto_Filer % python desk_move.py --once --dry-run
 [dry-run] Screenshot 2025-09-23 at 21.05.15.png -> /Users/makinampei/Pictures
 [dry-run] SF.jpg -> /Users/makinampei/Pictures
@@ -30,8 +31,9 @@ python desk_move.py --undo
 [dry-run] Screenshot 2025-09-24 at 18.39.41.png -> /Users/makinampei/Pictures
 [dry-run] Screenshot 2024-03-21 at 16.24.28.png -> /Users/makinampei/Pictures
 [done] moved: 0
+``` 
 
-
+``` 
 (base) makinampei@MakiN-MacBook-Pro Desktop_Auto_Filer % python desk_move.py --once
 [move] Screenshot 2025-09-23 at 21.05.15.png -> /Users/makinampei/Pictures
 [move] SF.jpg -> /Users/makinampei/Pictures
@@ -46,15 +48,17 @@ python desk_move.py --undo
 [move] Screenshot 2025-09-24 at 18.39.41.png -> /Users/makinampei/Pictures
 [move] Screenshot 2024-03-21 at 16.24.28.png -> /Users/makinampei/Pictures
 [done] moved: 12
+``` 
 
-
-
+``` 
 (base) makinampei@MakiN-MacBook-Pro Desktop_Auto_Filer % python desk_move.py --undo
 [undo] restored to /Users/makinampei/Desktop/Screenshot 2024-03-21 at 16.24.28.png
 ... (After 12 undos)
 (base) makinampei@MakiN-MacBook-Pro Desktop_Auto_Filer % python desk_move.py --undo
 [i] nothing to undo
+``` 
 
 # In order to make the watchdog work, an package is need to install
-```pip install watchdog 
-```python watch_watchdog.py
+``` pip install watchdog ``` 
+
+``` python watch_watchdog.py ``` 
