@@ -1,5 +1,7 @@
 # Desktop_Auto_Filer
 
+## install first
+``` pip install watchdog pyqt6 ```
 
 ## Main command line:
 ### This could print where the document will be move to (but not actually moved)
