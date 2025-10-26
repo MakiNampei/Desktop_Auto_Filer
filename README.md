@@ -20,13 +20,9 @@
 
 For a file \(f\) and a whitelisted folder \(d\):
 
-\[
-\text{score}(f,d)
-= 0.60\,s_{\text{sem}}
-+ 0.35\,s_{\text{ext}}
-+ 0.45\,s_{\text{tok}}
-+ 0.20\,s_{\text{recent}}
-\]
+$$
+\text{score}(f,d) = 0.60\,s_{\text{sem}} + 0.45\,s_{\text{ext}} + 0.35\,s_{\text{tok}} + 0.20\,s_{\text{recent}}
+$$
 
 - \(s_{\text{sem}}\): cosine similarity between an embedding of the **file name (+ optional content snippet)** and an embedding of the **folder’s description** (MiniLM).
 - \(s_{\text{ext}}\): weight learned from where files of this extension were filed.
@@ -35,11 +31,9 @@ For a file \(f\) and a whitelisted folder \(d\):
 
 **Confidence** (displayed to the user):
 
-\[
-\mathrm{conf}=\min(0.99,\;\max(0.50,\;0.58 + \Delta/5)),
-\quad
-\Delta=\text{score}_{(1)}-\text{score}_{(2)}.
-\]
+$$
+\mathrm{conf}=\min(0.99,\;\max(0.50,\;0.58 + \Delta/5)),\quad \Delta=\text{score}_{(1)}-\text{score}_{(2)}.
+$$
 
 **Content peek (conditional)**: for `.txt`/`.docx` with weak filename signal, we read a tiny snippet to enrich tokens/embedding. Never stored; bounded and fast.
 
