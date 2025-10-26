@@ -21,13 +21,15 @@
 For a file \(f\) and a whitelisted folder \(d\):
 
 $$
-\text{score}(f,d) = 0.60\,s_{\text{sem}} + 0.45\,s_{\text{ext}} + 0.35\,s_{\text{tok}} + 0.20\,s_{\text{recent}}
+\text{score}(f,d) = 0.60s_{\text{sem}} + 0.45s_{\text{ext}} + 0.35s_{\text{tok}} + 0.20s_{\text{recent}}
 $$
 
 **sem**: cosine similarity between an embedding of the **file name (+ optional content snippet)** and an embedding of the **folder’s description** (MiniLM).
 
 **ext**: weight learned from where files of this extension were filed.
+
 **tok**: weight from matched name tokens (e.g., “invoice”, “EECS”).
+
 **recent**: nudge toward where similar files were filed recently.
 
 **Confidence** (displayed to the user):
