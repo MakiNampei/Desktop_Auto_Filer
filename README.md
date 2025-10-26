@@ -56,31 +56,9 @@ $$
 
 1) **Clone / extract** the project.
 
-2) **Create venv & install deps**
-```bat
-py -3.11 -m venv .venv
-.\.venv\Scriptsctivate
-pip install -r requirements.txt
-```
+2) **Run the two .bat files**
 
-3) **Run the agent (first time, visibly)**
-```bat
-python agent.py
-```
-You should see the server start (port 8000). In another terminal:
-```bat
-powershell -NoLogo -Command "Invoke-RestMethod 'http://127.0.0.1:8000/health'"
-```
-Expect: `{"status":"up"}`
-
-4) **Run the UI**
-```bat
-python ui.py
-```
-
-5) **Add your whitelist** (from the main window → Manage Whitelist), then drop a file on your Desktop to see the File Pilot dialog.
-
-> Daily use: optional `Start_DeskPilot.bat` launches the agent **minimized** (with logs) and starts the UI.
+run Start_DesktopPilot.bat first then Start_UI.bat
 
 ---
 
