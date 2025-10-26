@@ -1,0 +1,5 @@
+uagents
+watchdog
+requests
+sentence-transformers
+numpy
