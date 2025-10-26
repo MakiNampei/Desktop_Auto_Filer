@@ -25,6 +25,7 @@ $$
 $$
 
 **sem**: cosine similarity between an embedding of the **file name (+ optional content snippet)** and an embedding of the **folder’s description** (MiniLM).
+
 **ext**: weight learned from where files of this extension were filed.
 **tok**: weight from matched name tokens (e.g., “invoice”, “EECS”).
 **recent**: nudge toward where similar files were filed recently.
